@@ -38,6 +38,27 @@ port = 9222
 ```
 
 ## run
+### 方法１
 ```
+& "chrome.exe path" --remote-debugging-port=9222 --user-data-dir="chrome profile path"
 python getpeaple.py > out.txt
 ```
+### 方法２
+```
+# Chromeをリモートデバッグモードで起動
+Start-Process `
+    -FilePath "chrome.exe path" `
+    -ArgumentList @(
+        "--remote-debugging-port=9222", 
+        "--user-data-dir=""chrome Profile"""
+    )
+
+# 5秒待機して、Chromeが完全に起動するのを待つ
+Start-Sleep -Seconds 5
+
+# Pythonスクリプトを実行
+& "python.exe path" `
+   "getpeaple.py path"
+```
+
+
