@@ -17,10 +17,11 @@ C:\Program Files\Google\Chrome\Application\chrome.exe
 zipファイルで任意のディレクトリにダウンロードされる
 
 ## リモートデバッグモードで起動
-
 ```
 & "chrome.exe path" --remote-debugging-port=9222 --user-data-dir="chrome profile path"
 ```
+アクセスが許可されたアカウントでログインしておく
+
 ## install library
 ```
 pip install selenium
